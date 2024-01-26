@@ -1,11 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-const colors =['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange', 'Pink', 'Brown']
+const colors = [
+  "Red",
+  "Blue",
+  "Green",
+  "Yellow",
+  "Purple",
+  "Orange",
+  "Pink",
+  "Brown",
+];
 export default class CCButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundColor: '',
+      backgroundColor: "",
     };
   }
 
@@ -13,15 +22,17 @@ export default class CCButton extends Component {
     this.setState({ backgroundColor: color });
   };
 
-  
   render() {
-   
-
     return (
-      <div style={{ backgroundColor: this.state.backgroundColor, padding: '20px' }}>
-        
+      <div
+        style={{ backgroundColor: this.state.backgroundColor, padding: "20px" }}
+      >
         <div>
-          {colors.map( (color) => (<button style={{margin:10, background:color}} onClick={() => this.Click(color)}>
+          {colors.map((color) => (
+            <button
+              style={{ margin: 10, background: color }}
+              onClick={() => this.Click(color)}
+            >
               {color}
             </button>
           ))}
@@ -30,5 +41,3 @@ export default class CCButton extends Component {
     );
   }
 }
-
-
